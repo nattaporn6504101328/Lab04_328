@@ -1,0 +1,57 @@
+header{
+    text-align: right;
+    padding-right: 15px;
+}
+text{
+    font-size: 14px;
+}
+.text1{
+    text-align: center;
+}
+.text2{
+    text-align: center;
+}
+.text3{
+    text-align: right;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.box {
+    flex: 1;
+    min-width: calc(50%);
+    padding: 5px;
+    text-align:left;
+    border: 1px solid #000;
+    background-color: transparent;
+    width: 150px;
+    height: 200px;
+    resize: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.row {
+    display: flex;
+    flex-basis: 97%; /* ควบคุมเส้นแบ่งระหว่างแถว */
+}
+textarea {
+    width: 97%; /* กำหนดความกว้างของ textarea เต็มหน้าจอ */
+    height: calc(1.5em * 2); /* กำหนดความสูงของ textarea ประมาณ 5 แถว (1.5em คือความสูงของแต่ละแถว) */
+    padding: 10px;
+    /* margin: 10px; */
+    text-align: center;
+    resize:none ; 
+}
+p {
+    text-indent: 3em; /* เยื่องเข้าในบรรทัดแรกของแต่ละ paragraph */
+    margin-left: 0; /* ไม่มีระยะห่างซ้ายเมื่อเยื่องเข้า */
+}
+
+p::first-of-type::first-letter {
+    font-size: inherit; /* ให้ตัวอักษรแรกในบรรทัดแรกของแต่ละ paragraph เป็นขนาดเดิม */
+    margin-right: 0.5em; /* ระยะห่างขวาเมื่อเยื่องเข้า */
+}
+

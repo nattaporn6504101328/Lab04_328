@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resignform.css">
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 16px;
+        }
+        .image {
+            width: 50px;
+            height: 50px;
+            background-color: gray; /* สีพื้นหลังของรูปภาพ */
+            
+            background-image:url(image/mjulogo.jpg)   
+            background-position: left;
+            background-size: cover;
+        }
+        .request {
+            flex-grow: 8;
+            text-align: center;
+            padding: 10px;
+        }
+        .mjthai {
+            flex-grow: 1;
+            text-align: right;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="image"></div>
+        <div class="request">
+            <h3>คำร้องขอลาออก</h3>
+        </div>
+        <div class="mjthai">มจท 21</div>
+    </div>
+
+    <header class="header">
+        <div>เขียนที่ มหาวิทยาลัยแม่โจ้</div>
+        <div>วัน/เดือน/ปี<input type="date"></div>
+    </header>
+    <div>
+        <form method="get", class="text">
+            เรื่อง ขอลาออก<br>
+            เรียน อธิการบดี ผ่านคณบดี คณะ
+            <select>
+                <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
+                <option value="ผลิตกรรมการเกษตร">ผลิตกรรมการเกษตร</option>
+                <option value="บริหารธุรกิจ">บริหารธุรกิจ</option>
+                <option value="เทคโนโลยีการประมงและทรัพยากรทางน้ำ">เทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                <option value="ศิลปศาสตร์">ศิลปศาสตร์</option>
+                <option value="สถาปัตยกรรมศาสตร์ และการออกแบบสิ่งแวดล้อม">สถาปัตยกรรมศาสตร์ และการออกแบบสิ่งแวดล้อม</option>
+                <option value="สารสนเทศและการสื่อสาร">สารสนเทศและการสื่อสาร</option>
+                <option value="วิศวกรรมและอุตสาหกรรมเกษตร">วิศวกรรมและอุตสาหกรรมเกษตร</option>
+                <option value="พัฒนาการท่องเที่ยว">พัฒนาการท่องเที่ยว</option>
+                <option value="เศรษฐศาสตร์">เศรษฐศาสตร์</option>
+                <option value="สัตวศาสตร์และเทคโนโลยี">สัตวศาสตร์และเทคโนโลยี</option>
+                <option value="มหาวิทยาลัยแม่โจ้-แพร่ เฉลิมพระเกียรติ">มหาวิทยาลัยแม่โจ้-แพร่ เฉลิมพระเกียรติ</option>
+                <option value="มหาวิทยาลัยแม่โจ้-ชุมพร">มหาวิทยาลัยแม่โจ้-ชุมพร</option>
+                <option value="คณะพยาบาลศาสตร์">คณะพยาบาลศาสตร์</option>
+                <option value="คณะสัตวแพทยศาสตร์">คณะสัตวแพทยศาสตร์</option>
+                <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+                <option value="วิทยาลัยพลังงานทดแทน">วิทยาลัยพลังงานทดแทน</option>
+                <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+            </select><br>
+            <p>ข้าพเจ้า <input type="checkbox">นาย
+            <input type="checkbox">นาง
+            <input type="checkbox">นางสาว
+            ชื่อ-นามสกุล <input type="text" required>
+            รหัสนักศึกษา<input type="text" required>
+            โทรศัพท์มือถือ(10หลัก)<input type="text" required>
+            โปรดระบุหลักสูตร ปริญญาตรี<input type="checkbox" required>4-5ปี 
+            <input type="checkbox" required>4 ปีเทียบเข้าเรียน(2ปี) 
+            <input type="checkbox" required> ภาคปกติ
+            <input type="checkbox" required>ภาคสมทบ
+            สาขาวิชา<input type="text" required>
+            มีความประสงค์จะขอลาออก เนื่องจาก <br>
+            <textarea></textarea>
+           
+            <br>
+            <input type="checkbox" name="checkbox" checked>พร้อมนี้ได้แนบใบยินยอมขอลาออกจากผู้ปกครอง</p>
+            <p>จึงเรียนมาเพื่อโปรดพิจารณา</p><br>
+            <div class="text2">ขอแสดงความนับถือ</div> <br>
+            <div class="text1">(....<input type="file" required>....)</div><br>
+            <div class="text2">นักศึกษา</div> <br>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="box">ความเห็นอาจารย์ที่ปรึกษา<br>
+                        <p><input type="checkbox" name="checkbox" checked>ทราบ</p>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                    <div class="box">ความเห็นประธานอาจารย์ประจําหลักสูตร
+                        <p><input type="checkbox" name="checkbox" checked>ทราบ</p>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">ความเห็นคณบดี
+                        <p><input type="checkbox" name="checkbox" checked>ทราบ</p>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                    <div class="box">ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ
+                        <p><input type="checkbox" name="checkbox" checked>ทราบ</p>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">ความเห็นอธิการบดี<br>
+                        <div class="text2"><input type="checkbox" name="checkbox" checked>อนุมัติ 
+                            <input type="checkbox" name="checkbox">ไม่อนุมัติ</div><br>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                    <div class="box">ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ 
+                        <br>
+                        <br>
+                        <div class="text2"><input type="text"></div>
+                        <br>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">สําหรับเจ้าหน้าที่บันทึกลงฐานข้อมูล 
+                        <br>
+                        <br>
+                        <div class="text2"><input type="text"></div>
+                        <br>
+                        <div class="text2"><input type="text" required></div>
+                        <br>
+                        <div class="text2">(......<input type="file" required>......)</div>
+                        <br>
+                        <div class="text2">วันที่<input type="date" required></div>
+                    </div>
+                    <div class="box">
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="text2">คําร้องใบลาออกจะสิ้นสุดที่กลุ่มภารกิจทะเบียนเรียนฯ</div>
+                        <div class="text2">สํานักบริหารและพัฒนาวิชาการ</div>
+                        <div class="text2">ชั้น 2 อาคารอํานวย ยศสุข</div>
+                        <div class="text2">เพื่อให้เจ้าหน้าที่บันทึกลงฐานข้อมูล </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
