@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab4_328.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>ตะกร้าสินค้า</title>
+    <style>
+        h1{
+            text-align: center;
+            display: flex;
+            margin: 50;
+            padding: 50;
+            color: rgb(0, 0, 0);
+            justify-content: center;
+        }
+        footer{
+            background-color: #3a362c;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position:static;
+            bottom: 100;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="top-menu">
+            <a href="index.html">หน้าแรก</a>
+            <a href="ProductPage.html">สินค้า</a>
+            <a href="search.html">ค้นหาสินค้า</a>
+            <a href="card.html">ตระกร้าสินค้า</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+        <div class="clearfix"></div>
+    </header>
+    <h1>รายการสินค้า</h1>
+    <div id="cart-items">
+        <!-- สินค้าที่ถูกเพิ่มในตะกร้าจะปรากฏที่นี่ -->
+    </div>
+    <div class="product-item">
+        <span class="product-name"> DAYLIGHT BAG</span>
+        <span class="product-price">290 BTH</span>
+        <div class="product-container">
+            <button class="btn decrease" onclick="decreaseCount(1)">-</button>
+            <span class="count" id="count-1">0</span>
+            <button class="btn increase" onclick="increaseCount(1)">+</button>
+        </div>
+       
+    </div>
+    <div class="product-item">
+        <span class="product-name">Nabi BAG</span>
+        <span class="product-price">289 BTH</span>
+        <div class="product-container">
+            <button class="btn decrease" onclick="decreaseCount(1)">-</button>
+            <span class="count" id="count-2">0</span>
+            <button class="btn increase" onclick="increaseCount(1)">+</button>
+        </div>
+    </div>
+    <div class="product-item">
+        <span class="product-name">Harrottwins BAG</span>
+        <span class="product-price">290 BTH</span>
+        <div class="product-container">
+            <button class="btn decrease" onclick="decreaseCount(1)">-</button>
+            <span class="count" id="count-3">0</span>
+            <button class="btn increase" onclick="increaseCount(1)">+</button>
+        </div>
+    </div>
+    <div class="product-item">
+        <span class="product-name">PeactreeMarket BAG</span>
+        <span class="product-price">299 BTH</span>
+        <div class="product-container">
+            <button class="btn decrease" onclick="decreaseCount(1)">-</button>
+            <span class="count" id="count-4">0</span>
+            <button class="btn increase" onclick="increaseCount(1)">+</button>
+        </div>
+    </div>
+    <script>
+        // เพิ่มสินค้าในตะกร้า
+        function addToCart() {
+            var productName = $('.product-card h3').text();
+            var productPrice = $('.product-card .probth').text();
+            
+            var cartItems = $('#cart-items');
+            cartItems.append('<p>' + productName + ' - ' + productPrice + '</p>');
+        }
+        function increaseCount(productId) {
+    var countElement = $('#count-' + productId);
+    var currentCount = parseInt(countElement.text());
+
+    // เพิ่มจำนวนสินค้าในตระกร้า
+    currentCount++;
+    countElement.text(currentCount);
+
+    // สามารถเพิ่มโค้ดเพิ่มเติมเพื่ออัปเดตสถานะตระกร้าสินค้าได้
+}
+
+function decreaseCount(productId) {
+    var countElement = $('#count-' + productId);
+    var currentCount = parseInt(countElement.text());
+
+    // ลดจำนวนสินค้าในตระกร้า
+    if (currentCount > 0) {
+        currentCount--;
+        countElement.text(currentCount);
+    }
+
+}    
+$(document).ready(function(){
+    $('.product-card').each(function() {
+        var countElement = $(this).find('.count');
+        var increaseBtn = $(this).find('.increase');
+        var decreaseBtn = $(this).find('.decrease');
+
+        var count = 0; // จำนวนสินค้าเริ่มต้น
+
+        // เพิ่มจำนวนสินค้าเมื่อคลิกปุ่มเพิ่ม
+        increaseBtn.click(function(){
+            count++;
+            countElement.text(count);
+        });
+
+        // ลดจำนวนสินค้าเมื่อคลิกปุ่มลด
+        decreaseBtn.click(function(){
+            if (count > 0) {
+                count--;
+                countElement.text(count);
+            }
+        });
+    });
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <footer>@coppyright 2023</footer>
+</body>
+</html>

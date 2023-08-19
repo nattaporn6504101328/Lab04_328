@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab04_328.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Product Page</title>
+    
+</head>
+<body>
+    <header class="top-header">
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="top-menu">
+            <a href="index.html">หน้าแรก</a>
+            <a href="ProductPage.html">สินค้า</a>
+            <a href="search.html">ค้นหาสินค้า</a>
+            <a href="card.html">ตระกร้าสินค้า</a>
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+        <div class="clearfix"></div>
+    </header>
+    <div class="slideshow">
+        <div><img src="/londonbag.jpg" alt="Product 1"></div>
+        <div><img src="/crossbody.jpg" alt="Product 2"></div>
+        <div><img src="/harrottwins.jpg" alt="Product 3"></div>
+        <div><img src="/merketBag.jpg" alt="Product 4"></div>
+    </div>
+    
+    <div class="product-list">
+        <div class="product-card">
+            <img src="/londonbag.jpg" alt="Product 1" width="150px">
+            <h3>DAYLIGHT BAG</h3>
+                <p> กระเป๋า สไตล์ลอนดอน <br>
+                    จะสะพายแบบครอสบอดี้ หรือสะพายไหล่ ก็เก๋ดูดีมีสไตล์
+                    มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะ 
+                    อีกทั้งยังมีให้เลือกถึง 3 สี คือ caramel mocca black
+                </p>
+            <span class="probth"> 290 BTH </span>
+            <span class="prosale"> 690 BTH </span><br><br> 
+            <div class="product-container">
+                <button class="btn decrease">-</button>
+                <span class="count">0</span>
+                <button class="btn increase">+</button>
+
+            </div>
+            
+            <br>
+            <button class="order-button" onclick="addToCart(1)">สั่งซื้อ</button>
+            <br><br>
+            <button class="policy-button" onclick="openPolicyModal(1)">รายละเอียด</button>
+        
+        </div>
+        <div class="product-card">
+            <img src="/crossbody.jpg" alt="Product 2" width="150px">
+            <h3>NABI BAG</h3>
+                <p> Nabi bag มีสไตล์คล้ายกระเป๋านักเรียนญี่ปุ่น เหมาะกับสายแฟสุดๆ  จะสะพายแบบครอสบอดี้ หรือสะพายหลัง ก็เท่ห์
+                    มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะ อีกทั้งยังมีให้เลือกถึง 2 สี คือ  black and autum
+                </p>
+            <span class="probth"> 289 BTH </span>
+            <span class="prosale"> 950 BTH </span><br><br>
+            <div class="product-container">
+                <button class="btn decrease">-</button>
+                <span class="count">0</span>
+                <button class="btn increase">+</button>
+
+            </div>
+            <br>
+            <button class="order-button" onclick="addToCart(1)">สั่งซื้อ</button>
+            <br><br>
+            <button class="policy-button" onclick="openPolicyModal(1)">รายละเอียด</button>
+            
+        </div>
+        <div class="product-card">
+            <img src="/harrottwins.jpg" alt="Product 3" width="150px">
+            <h3>Harrottwins BAG</h3>
+                <p> Harrottwin studio <br>
+                    ใช้สะพายข้างหิ้วสวย ๆ ใช้ได้กับทุกโอกาส
+                    มีให้เลือกถึง 4 สี คือ  black mocca caramel and off-white
+                </p>
+                <span class="probth"> 290 BTH </span>
+                <span class="prosale"> 580 BTH </span><br><br>
+                <div class="product-container">
+                    <button class="btn decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="btn increase">+</button>
+
+                </div>
+                <br>
+            <button class="order-button" onclick="addToCart(1)">สั่งซื้อ</button>
+            <br><br>
+            <button class="policy-button" onclick="openPolicyModal(1)">รายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="/merketBag.jpg" alt="Product 4" width="150px">
+            <h3>Peactree</h3>
+                <p>  Market Bag กระเป๋าสไตล์ไปจ่ายตลาดสุดเก๋
+                    จะสะพายแบบครอสบอดี้ หรือสะพายไหล่ ก็ดูเท่ห์
+                    มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะมากๆ 
+                    มีให้เลือกถึง 3 สี คือ  toffy black and cotton
+                </p>
+                <span class="probth"> 299 BTH </span>
+                <span class="prosale"> 790 BTH </span><br><br>
+                <div class="product-container">
+                    <button class="btn decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="btn increase">+</button>
+                </div><br>
+                <button class="order-button" onclick="addToCart(1)">สั่งซื้อ</button>
+                <br><br>
+            <button class="policy-button" onclick="openPolicyModal(1)">รายละเอียด</button>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center;" >
+        
+        <div class="totalPriceValue" style="background-color: rgb(238, 183, 144); padding: 2rem;">
+            <button type="button" id="calculate-total-button" style="background: #812900;color: rgb(255, 255, 255);">ราคารวม</button>
+            <span>ราคารวม:</span>
+            <span id="total-price-value">0</span> BTH
+        </div>
+        
+        
+    </div>
+    <div id="orderFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close-form">&times;</span>
+            <h2>กรอกรายละเอียดผู้ซื้อ</h2>
+            <form id="order-form">
+                <label for="name">ชื่อ-นามสกุล:</label>
+                <input type="text" id="name" name="name" required><br><br>
+    
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="address">ที่อยู่:</label>
+                <input type="text" id="address" name="address" required><br><br>
+    
+                <label for="telephone_number">เบอร์โทร:</label>
+                <input type="text" id="telephone_number" name="telephone_number" required><br><br>
+    
+                <button type="button" id="ok-button">OK</button>
+                <button type="button" id="cancel-button">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <div id="orderPolicyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePolicyModal()">&times;</span>
+            <h2>รายละเอียดการสั่งซื้อ</h2>
+            <p> 1. DAYLIGHT BAG กระเป๋า สไตล์ลอนดอน 
+                จะสะพายแบบครอสบอดี้ หรือสะพายไหล่ ก็เก๋ดูดีมีสไตล์
+                มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะ 
+                อีกทั้งยังมีให้เลือกถึง 3 สี คือ caramel mocca black
+            </p>
+            <p> 2. Nabi bag มีสไตล์คล้ายกระเป๋านักเรียนญี่ปุ่น เหมาะกับสายแฟสุดๆ  
+                จะสะพายแบบครอสบอดี้ หรือสะพายหลัง ก็เท่ห์
+                มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะ 
+                อีกทั้งยังมีให้เลือกถึง 2 สี คือ  black and autum
+            </p>
+            <p> 3. Harrottwin studio 
+                ใช้สะพายข้างหิ้วสวย ๆ ใช้ได้กับทุกโอกาส
+                มีให้เลือกถึง 4 สี คือ  black mocca caramel and off-white
+            </p>
+            <p> 4. Market Bag กระเป๋าสไตล์ไปจ่ายตลาดสุดเก๋
+                จะสะพายแบบครอสบอดี้ หรือสะพายไหล่ ก็ดูเท่ห์
+                มีหลายช่องใส่ของ ขนาดกว้าง จุของได้เยอะมากๆ 
+                มีให้เลือกถึง 3 สี คือ  toffy black and cotton
+            </p> <!-- แสดงเนื้อหาของนโยบายการสั่งซื้อ -->
+        </div>
+    </div>
+    
+    
+
+    <script>
+     
+ 
+
+     $(document).ready(function(){
+        $('.slideshow').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true
+        });
+
+        var policyModal = $('#orderPolicyModal');
+        var closeModalButton = $('.close');
+
+        // เปิด Modal และแสดงรายละเอียดเมื่อคลิกปุ่ม "รายละเอียด"
+        window.openPolicyModal = function(productId) {
+            policyModal.find('h2').text('รายละเอียดสินค้า');
+            policyModal.find('.modal-content p').show();
+            policyModal.find('.modal-content p:nth-child(' + productId + ')').show();
+            policyModal.show();
+        };
+
+        // ปิด Modal เมื่อคลิกปุ่มปิด (x)
+        closeModalButton.click(function(){
+            policyModal.hide();
+        });
+    });
+
+    function openPolicyModal(index) {
+        $('.modal-content p').hide(); // ซ่อนรายละเอียดทั้งหมด
+        $('.modal-content p:nth-child(' + index + ')').show(); // แสดงรายละเอียดตาม index
+        $('#orderPolicyModal').css('display', 'block');
+    }
+
+    function closePolicyModal() {
+        $('#orderPolicyModal').css('display', 'none');
+    }
+    
+    
+    $(document).ready(function(){
+        var totalPriceValue = $('#total-price-value');
+        var calculateTotalButton = $('#calculate-total-button');
+        var productPrices = $('.probth'); // เลือกส่วนที่มีราคาสินค้า
+
+        calculateTotalButton.click(function(){
+            var total = 0;
+
+            // วนลูปเพื่อนับราคาสินค้าทั้งหมด
+            productPrices.each(function(){
+                var price = parseInt($(this).text().replace(' BTH', ''));
+                total += price;
+            });
+
+            totalPriceValue.text(total);
+        });
+    });
+    $(document).ready(function(){
+    $('.product-card').each(function() {
+        var countElement = $(this).find('.count');
+        var increaseBtn = $(this).find('.increase');
+        var decreaseBtn = $(this).find('.decrease');
+
+        var count = 0; // จำนวนสินค้าเริ่มต้น
+
+        // เพิ่มจำนวนสินค้าเมื่อคลิกปุ่มเพิ่ม
+        increaseBtn.click(function(){
+            count++;
+            countElement.text(count);
+        });
+
+        // ลดจำนวนสินค้าเมื่อคลิกปุ่มลด
+        decreaseBtn.click(function(){
+            if (count > 0) {
+                count--;
+                countElement.text(count);
+            }
+        });
+    });
+});
+$(document).ready(function() {
+    var orderFormModal = $('#orderFormModal');
+    var closeModalButton = orderFormModal.find('.close-form');
+    var okButton = orderFormModal.find('#ok-button');
+    var cancelButton = orderFormModal.find('#cancel-button');
+    var orderForm = orderFormModal.find('#order-form');
+    
+    // เปิดฟอร์มกรอกรายละเอียดผู้ซื้อเมื่อคลิกปุ่ม "สั่งซื้อ"
+    $('.order-button').click(function() {
+        orderFormModal.show();
+    });
+
+    // ปิดฟอร์มเมื่อคลิกปุ่มปิด (x)
+    closeModalButton.click(function() {
+        orderFormModal.hide();
+    });
+
+    // ปิดฟอร์มเมื่อคลิกปุ่ม Cancel
+    cancelButton.click(function() {
+        orderFormModal.hide();
+    });
+
+    // ตรวจสอบและแสดงผลข้อมูลเมื่อคลิกปุ่ม OK
+    okButton.click(function() {
+        var name = orderForm.find('#name').val();
+        var email = orderForm.find('#email').val();
+        var address = orderForm.find('#address').val();
+        var telephoneNumber = orderForm.find('#telephone_number').val();
+
+        if (name && email && address && telephoneNumber) {
+            alert('บันทึกแบบฟอร์มสำเร็จ');
+            orderFormModal.hide();
+        } else {
+            alert('กรุณากรอกข้อความให้ครบทุกช่อง');
+        }
+    });
+});
+function addToCart(productId) {
+    var countElement = $('#count-' + productId);
+    var currentCount = parseInt(countElement.text());
+
+    // เพิ่มจำนวนสินค้าที่เพิ่มเข้าตระกร้า
+    currentCount++;
+    countElement.text(currentCount);
+
+    // แสดงข้อความแจ้งเตือน
+    alert('เพิ่มสินค้าลงตระกร้าสำเร็จ');
+
+    // สามารถเพิ่มโค้ดเพิ่มเติมเพื่อบันทึกสถานะตระกร้าสินค้าได้
+}
+
+</script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <footer>@coppyright 2023</footer>
+</body>
+</html>
